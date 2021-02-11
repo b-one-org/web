@@ -129,6 +129,8 @@
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+    width:auto;
+    height: auto;
   }
   .fa-times {
     color: #fff;
