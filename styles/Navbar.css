@@ -130,7 +130,7 @@
     font-size: 1.8rem;
     cursor: pointer;
     width:auto;
-    height: auto;
+    height:max-content;
   }
   .fa-times {
     color: #fff;
