@@ -8593,10 +8593,6 @@
       "file": "static/chunks/1.js"
     },
     {
-      "id": "./node_modules/next/dist/compiled/webpack/global.js",
-      "file": "static/chunks/1.js"
-    },
-    {
       "id": "./node_modules/process/browser.js",
       "file": "static/chunks/1.js"
     },

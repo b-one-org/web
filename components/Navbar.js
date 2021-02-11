@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import Button from './Button';
 import Link from 'next/link'
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars,faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -36,7 +38,7 @@ const Navbar = () => {
         </Link>
         <div className='navbar-container'>
           <div className='navbar-menu-icon' onClick={handleClick}>
-            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+            <FontAwesomeIcon icon={click ? faTimes:faBars}/>
           </div>
           <ul className={click ? 'navbar-nav-menu active' : 'navbar-nav-menu'}>
             <li className='navbar-nav-item'>
