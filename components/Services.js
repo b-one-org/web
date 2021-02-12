@@ -1,3 +1,23 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import 
+{ faBook, 
+  faPrayingHands,
+  faChalkboardTeacher,
+  faGlobeAmericas,
+  faDumbbell,
+  faUsers
+} from "@fortawesome/free-solid-svg-icons";
+
+
+var icons={
+  'fa fa-book':faBook,
+  'fa fa-praying-hands':faPrayingHands,
+  'fa fa-chalkboard-teacher':faChalkboardTeacher,
+  'fa fa-globe-americas':faGlobeAmericas,
+  'fa fa-dumbbell':faDumbbell,
+  'fa fa-users':faUsers,
+}
+
 
 const Services = ({title,data}) => {
     return (
@@ -13,7 +33,7 @@ const Services = ({title,data}) => {
             ? data.map((d, i) => (
                 <div  key={`${d.name}-${i}`} className='services-col-md-4'>
                   {" "}
-                  <i className={d.icon + ' services-icon'}></i>
+                  <FontAwesomeIcon icon={icons[d.icon]} className='services-icon'/>
                   <div className='services-service-desc'>
                     <h3 className='services-subtitle'>{d.name}</h3>
                     <p className='services-text'>{d.text}</p>

@@ -1,6 +1,7 @@
 
 
 import Button from './Button';
+//import Image from 'next/image'
 
 const Header = ({img, activateButton=false, buttonText, btnStyle='btn--outline', title, content, buttonLink="/"}) => {
   return (
