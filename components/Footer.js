@@ -2,6 +2,8 @@
 import Button from './Button';
 import Link from 'next/link'
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram, faYoutube, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   return (
@@ -63,7 +65,7 @@ const Footer = () => {
               aria-label='Instagram'
             >
               <a className='footer-social-icon-link'>
-                <i className='fab fa-instagram'/>
+                <FontAwesomeIcon icon={faInstagram}/>
               </a>
             </Link>
             <Link
@@ -72,7 +74,7 @@ const Footer = () => {
               aria-label='Youtube'
             >
               <a className='footer-social-icon-link'>
-                <i className='fab fa-youtube'/>
+                <FontAwesomeIcon icon={faYoutube}/>
               </a>
             </Link>
             <Link
@@ -81,7 +83,7 @@ const Footer = () => {
               aria-label='LinkedIn'
             >
               <a className='footer-social-icon-link'>
-                <i className='fab fa-linkedin-in'/>
+                <FontAwesomeIcon icon={faLinkedinIn}/>
               </a>
             </Link>
           </div>
