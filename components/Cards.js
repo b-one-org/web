@@ -16,7 +16,7 @@ const Cards = () => {
             />
             <CardItem
               src='images/hire-team-4.jpg'
-              text='Hire ExpA'
+              text='Work with ExpA'
               path='/hire'
             />
             <CardItem

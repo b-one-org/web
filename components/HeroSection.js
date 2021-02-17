@@ -24,7 +24,7 @@ const HeroSection = () => {
           onClick={console.log('hey')}
           linkTo="/hire"
         >
-          HIRE ExpA
+          WORK WITH ExpA
         </Button>
       </div>
     </div>

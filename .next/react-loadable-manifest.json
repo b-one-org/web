@@ -1,14 +1,4 @@
 {
-  "../components/Cards": [
-    {
-      "id": "./components/CardItem.js",
-      "file": "static/chunks/2.js"
-    },
-    {
-      "id": "./components/Cards.js",
-      "file": "static/chunks/2.js"
-    }
-  ],
   "../components/ContentBlock": [
     {
       "id": "./components/ContentBlock.js",

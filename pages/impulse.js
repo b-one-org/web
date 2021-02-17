@@ -22,17 +22,17 @@ const ContentBlock = loadable(() => import('../components/ContentBlock'));
 const Features = loadable(() => import('../components/Features'));
 
 
-const Hire = () => {
+const Impulse = () => {
   return (
     <>
       <Head>
-        <title>BOne - Hire</title>
+        <title>BOne - Impulse</title>
         <link rel="shortcut icon" href="/circle-regular.svg" />
       </Head>
       <Container>
       <Header
         activateButton={true}
-        buttonText={"HIRE ExpA"}
+        buttonText={"WORK WITH ExpA"}
         btnStyle={'btn--outline'}
         img={'/images/header-hire.jpg'}
         title={"IMPULSE"}
@@ -86,4 +86,4 @@ const Hire = () => {
   );
 }
 
-export default Hire;
+export default Impulse;

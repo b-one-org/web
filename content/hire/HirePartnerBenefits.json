@@ -3,12 +3,12 @@
     "title": "Dedicated Team"
   },
   {
-    "icon": "fas fa-headset",
-    "title": "ExpA Manager"
+    "icon": "fas fa-coins",
+    "title": "Investors"
   },
   {
-    "icon": "fas fa-file-contract",
-    "title": "Flexible Contract"
+    "icon": "fa fa-globe-americas",
+    "title": "Ecosystem Networking"
   }
   ]
 }

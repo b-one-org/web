@@ -48,10 +48,10 @@ const Navbar = () => {
             </li>
             <li className='navbar-nav-item'>
               <Link
-                href='/hire'
+                href='/impulse'
                 onClick={closeMobileMenu}
               >
-                <a className='navbar-nav-links'>Hire</a>
+                <a className='navbar-nav-links'>Impulse</a>
               </Link>
             </li>
             <li className='navbar-nav-item'>

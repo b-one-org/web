@@ -8,7 +8,8 @@ import
   faHands,
   faCoins,
   faPeopleArrows,
-  faHandsHelping
+  faHandsHelping,
+  faGlobeAmericas
 } from "@fortawesome/free-solid-svg-icons";
 
 var icons={
@@ -20,7 +21,8 @@ var icons={
   'fas fa-hands':faHands,
   'fas fa-coins':faCoins,
   'fas fa-people-arrows':faPeopleArrows,
-  'fas fa-hands-helping':faHandsHelping
+  'fas fa-hands-helping':faHandsHelping,
+  'fa fa-globe-americas':faGlobeAmericas,
 }
 
 const Features = ({title,data}) => {
