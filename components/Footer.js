@@ -1,11 +1,17 @@
 
 import Button from './Button';
 import Link from 'next/link'
+import { useRouter } from 'next/router';
+import en from '../locales/en';
+import es from '../locales/es';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faYoutube, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t=locale==='en' ? en: es;
   return (
     <div className='footer-container'>
       {/*<section className='footer-subscription'>
@@ -30,20 +36,20 @@ const Footer = () => {
       <div className='footer-links'>
         <div className='footer-link-wrapper'>
           <div className='footer-link-items'>
-            <h2>About Us</h2>
-            <Link href='/about' exact>Vision</Link>
-            <Link href='/about'>Community</Link>
-            <Link href='/about'>Frameworks</Link>
+            <h2>{t.footer.aboutus}</h2>
+            <Link href='/about' exact>{t.footer.vision}</Link>
+            <Link href='/about'>{t.footer.community}</Link>
+            <Link href='/about'>{t.footer.frameworks}</Link>
           </div>
           <div className='footer-link-items'>
             <h2>ExpA</h2>
-            <Link href='/join'>Who they are</Link>
-            <Link href='/join'>Principles</Link>
-            <Link href='/join'>Benefits</Link>
+            <Link href='/join'>{t.footer.expAWho}</Link>
+            <Link href='/join'>{t.footer.principles}</Link>
+            <Link href='/join'>{t.footer.benefits}</Link>
           </div>
           <div className='footer-link-items'>
-            <h2>Connect</h2>
-            <Link href='https://airtable.com/shrvo0dz6nvEEXMIl'>Contact Us</Link>
+            <h2>{t.footer.connect}</h2>
+            <Link href='https://airtable.com/shrvo0dz6nvEEXMIl'>{t.footer.contact}</Link>
             <Link href='/'>Instagram</Link>
             <Link href='/'>Youtube</Link>
             <Link href='/'>LinkedIn</Link>
@@ -60,7 +66,7 @@ const Footer = () => {
           <small className='footer-website-rights'>BOne © 2021</small>
           <div className='footer-social-icons'>
             <Link
-              href='/'
+              href='https://www.instagram.com/b.one.ig/'
               target='_blank'
               aria-label='Instagram'
             >

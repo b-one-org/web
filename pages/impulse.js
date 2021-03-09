@@ -1,18 +1,16 @@
 
+import { useRouter } from 'next/router';
+import en from '../locales/en';
+import es from '../locales/es';
+
 import loadable from '@loadable/component';
 import Container from '../components/Container';
 import Head from 'next/head'
 
-import HireHeaderContent from '../content/hire/HireHeaderContent'
-import HireExpAIndividually from '../content/hire/HireExpAIndividually.json'
-import HireExpATeam from '../content/hire/HireExpATeam.json'
-//import AboutExpA from '../content/hire/AboutExpA.json'
-import AboutExpAContent from '../content/hire/AboutExpA.js'
-import HireRemoteOnsite from '../content/hire/HireRemoteOnsite.json'
-import ExpASkills from '../content/hire/HireExpASkills.json'
-import ExpAMotivated from '../content/hire/HireExpAMotivated.json'
-import PartnerBenefits from '../content/hire/HirePartnerBenefits.json';
-import ProvocativeEnding from '../content/hire/HireProvocativeMiddleBlock.json'
+import HireExpAIndividually from '../content/hire/en/HireExpAIndividuallyEN.json'
+import HireExpATeam from '../content/hire/en/HireExpATeamEN.json'
+import ExpASkills from '../content/hire/en/HireExpASkillsEN.json'
+import ExpAMotivated from '../content/hire/en/HireExpAMotivatedEN.json'
 
 
 const Header = loadable(() => import('../components/Header'));
@@ -23,62 +21,66 @@ const Features = loadable(() => import('../components/Features'));
 
 
 const Impulse = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t=locale==='en' ? en: es;
+
   return (
     <>
       <Head>
-        <title>BOne - Impulse</title>
+        <title>BOne - {t.hire.headTitle}</title>
         <link rel="shortcut icon" href="/circle-regular.svg" />
       </Head>
       <Container>
       <Header
         activateButton={true}
-        buttonText={"WORK WITH ExpA"}
+        buttonText={t.hire.headerButtonText}
         btnStyle={'btn--outline'}
         img={'/images/header-hire.jpg'}
-        title={"IMPULSE"}
-        content={HireHeaderContent}
+        title={t.hire.headerTitle}
+        content={t.hire.headerContent}
         buttonLink={"https://airtable.com/shrRYInHwVlgOx1o8"}
         />
         <MiddleBlock
-        title={"Who They Are"}
-        content={AboutExpAContent}
+        title={t.hire.aboutExpATitle}
+        content={t.hire.aboutExpAContent}
         />
         <Features
-        title={"Partner Benefits"}
-        data={PartnerBenefits.Features}
+        title={t.hire.partnerBenefitsTitle}
+        data={t.hire.partnerBenefitsFeatures}
         />
         <ContentBlock
         left={false}
         img={HireExpAIndividually.img}
-        title={HireExpAIndividually.title}
-        content={HireExpAIndividually.content}
+        title={t.hire.expAIndividuallyTitle}
+        content={t.hire.expAIndividuallyContent}
         />
         <ContentBlock
         left={true}
         img={HireExpATeam.img}
-        title={HireExpATeam.title}
-        content={HireExpATeam.content}
+        title={t.hire.expATeamTitle}
+        content={t.hire.expATeamContent}
         />
         <MiddleBlock
-        title={HireRemoteOnsite.title}
-        content={HireRemoteOnsite.content}
+        title={t.hire.remoteOnsiteTitle}
+        content={t.hire.remoteOnsiteContent}
         />
         <ContentBlock
         left={true}
         img={ExpASkills.img}
-        title={ExpASkills.title}
-        content={ExpASkills.content}
+        title={t.hire.expASkillsTitle}
+        content={t.hire.expASkillsContent}
         />
         <ContentBlock
         left={false}
         img={ExpAMotivated.img}
-        title={ExpAMotivated.title}
-        content={ExpAMotivated.content}
+        title={t.hire.expAMotivatedTitle}
+        content={t.hire.expAMotivatedContent}
         />
         <MiddleBlockButton
-        title={ProvocativeEnding.title}
-        content={ProvocativeEnding.content}
-        buttonText={ProvocativeEnding.buttonText}
+        title={t.hire.provocativeEndingTitle}
+        content={t.hire.provocativeEndingContent}
+        buttonText={t.hire.provocativeEndingButtonText}
         buttonLink={"https://airtable.com/shrRYInHwVlgOx1o8"}
         />
       </Container>

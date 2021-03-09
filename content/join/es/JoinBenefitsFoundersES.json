@@ -1,0 +1,14 @@
+{ "Features": [{
+    "icon": "fas fa-coins",
+    "title": "Inversores"
+  },
+  {
+    "icon": "fas fa-people-arrows",
+    "title": "Mentorias"
+  },
+  {
+    "icon": "fas fa-hands-helping",
+    "title": "Equipo"
+  }
+  ]
+}

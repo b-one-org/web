@@ -1,0 +1,14 @@
+{ "Features": [{
+    "icon": "fas fa-users",
+    "title": "Equipo dedicado"
+  },
+  {
+    "icon": "fas fa-coins",
+    "title": "Inversores"
+  },
+  {
+    "icon": "fa fa-globe-americas",
+    "title": "Contactos en el ecosistema"
+  }
+  ]
+}

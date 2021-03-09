@@ -1,0 +1,14 @@
+{ "Features": [{
+    "icon": "fas fa-project-diagram",
+    "title": "Se disruptivo"
+  },
+  {
+    "icon": "fas fa-brain",
+    "title": "Piensa en el camino alternativo"
+  },
+  {
+    "icon": "fas fa-hands",
+    "title": "Haz las cosas con amor"
+  }
+  ]
+}

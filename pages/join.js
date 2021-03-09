@@ -1,17 +1,15 @@
+import { useRouter } from 'next/router';
+import en from '../locales/en';
+import es from '../locales/es';
 
 import loadable from '@loadable/component';
 import Container from '../components/Container';
 import Head from 'next/head'
 
-import JoinHeaderContent from '../content/join/JoinHeaderContent'
-import ExpAProjects from '../content/join/JoinExpAProjects.json'
-import ExpAProblems from '../content/join/JoinExpAProblems.json'
-import Community from '../content/join/JoinExpACommunity.json'
-import Life from '../content/join/JoinExpALove.json'
-import Principles from '../content/join/JoinPrinciples.json';
-import BenefitsEntrepreneurExpA from '../content/join/JoinBenefitsEntrepreneur.json';
-import BenefitsExpA from '../content/join/JoinBenefitsExpA.json';
-import ProvocativeEnding from '../content/join/JoinProvocativeMiddleBlock.json'
+import ExpAProjects from '../content/join/en/JoinExpAProjectsEN.json'
+import ExpAProblems from '../content/join/en/JoinExpAProblemsEN.json'
+import Culture from '../content/join/en/JoinExpACultureEN.json'
+import Love from '../content/join/en/JoinExpALoveEN.json'
 
 
 const Header = loadable(() => import('../components/Header'));
@@ -22,62 +20,67 @@ const Services = loadable(() => import('../components/Services'));
 
 
 const Join = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t=locale==='en' ? en: es;
+
   return (
     <>
       <Head>
-        <title>BOne - Join</title>
+        <title>BOne - {t.join.headTitle}</title>
         <link rel="shortcut icon" href="/circle-regular.svg" />
       </Head>
       <Container>
         <Header
         activateButton={true}
-        buttonText={"BECOME A ExpA"}
+        buttonText={t.join.headerButtonText}
         btnStyle={'btn--outline'}
         img={'/images/expa-2.jpg'}
-        title={"IMPACT"}
-        content={JoinHeaderContent}
+        title={t.join.headerTitle}
+        content={t.join.headerContent}
         buttonLink={"https://airtable.com/shrCuV6CA4uhuZtTv"}
         />
         <Features
-        title={"Principles"}
-        data={Principles.Features}
+        title={t.join.principlesTitle}
+        data={t.join.principlesFeatures}
         />
         <ContentBlock
         left={false}
         img={ExpAProjects.img}
-        title={ExpAProjects.title}
-        content={ExpAProjects.content}
+        title={t.join.workProjectsTitle}
+        content={t.join.workProjectsContent}
         />
         <Services
-        title={"Benefits"}
-        data={BenefitsExpA.Services}
+        title={t.join.expaBenefitsTitle}
+        content={t.join.expaBenefitsContent}
+        data={t.join.expaBenefitsFeatures}
         />
         <ContentBlock
         left={true}
         img={ExpAProblems.img}
-        title={ExpAProblems.title}
-        content={ExpAProblems.content}
+        title={t.join.workChallengesTitle}
+        content={t.join.workChallengesContent}
         />
         <Features
-        title={"We Are Your Vehicle"}
-        data={BenefitsEntrepreneurExpA.Features}
+        title={t.join.foundersBenefitsTitle}
+        data={t.join.foundersBenefitsFeatures}
         />
         <ContentBlock
         left={true}
-        img={Community.img}
-        title={Community.title}
-        content={Community.content}
+        img={Culture.img}
+        title={t.join.cultureTitle}
+        content={t.join.cultureContent}
         />
         <ContentBlock
         left={false}
-        img={Life.img}
-        title={Life.title}
-        content={Life.content}
+        img={Love.img}
+        title={t.join.loveTitle}
+        content={t.join.loveContent}
         />
         <MiddleBlockButton
-        title={ProvocativeEnding.title}
-        content={ProvocativeEnding.content}
-        buttonText={ProvocativeEnding.buttonText}
+        title={t.join.provocativeEndingTitle}
+        content={t.join.provocativeEndingContent}
+        buttonText={t.join.provocativeEndingButtonText}
         buttonLink={"https://airtable.com/shrCuV6CA4uhuZtTv"}
         />
       </Container>

@@ -2,26 +2,26 @@
 import CardItem from './CardItem';
 
 
-const Cards = () => {
+const Cards = ({title, textCardLeft, textCardRight, textCardMiddle}) => {
   return (
     <div className='cards'>
-      <h6 className='cards-h6'>What are you looking for?</h6>
+      <h6 className='cards-h6'>{title}</h6>
       <div className='cards-container'>
         <div className='cards-wrapper'>
           <ul className='cards-items'>
             <CardItem
               src='images/img-9.jpg'
-              text='Become an Explorer of the Alternative'
+              text={textCardLeft}
               path='/join'
             />
             <CardItem
               src='images/hire-team-4.jpg'
-              text='Work with ExpA'
+              text={textCardMiddle}
               path='/hire'
             />
             <CardItem
               src='images/problem-2.jpg'
-              text='Trust us your problem'
+              text={textCardRight}
               path='https://airtable.com/shrvo0dz6nvEEXMIl'
             />
           </ul>

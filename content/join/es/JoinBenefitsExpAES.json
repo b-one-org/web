@@ -1,0 +1,35 @@
+{
+    "title":"Beneficios",
+    "content":"Cuando te conviertes en un Explorador de lo Alternativo, podes acceder a muchas cosas que te mantienen en equilibrio cuerpo-mente y siempre aprendiendo.",
+    "services": [{
+        "icon": "fa fa-book",
+        "name": "Libros",
+        "text": ""
+    },
+    {
+        "icon": "fa fa-praying-hands",
+        "name": "Salud",
+        "text": ""
+    },
+    {
+        "icon": "fa fa-chalkboard-teacher",
+        "name": "Cursos",
+        "text": ""
+    },
+    {
+        "icon": "fa fa-globe-americas",
+        "name": "Hospitalidad",
+        "text": ""
+    },
+    {
+        "icon": "fa fa-dumbbell",
+        "name": "Entrenamiento",
+        "text": ""
+    },
+    {
+        "icon": "fa fa-users",
+        "name": "Conferencias",
+        "text": ""
+    }
+    ]
+}

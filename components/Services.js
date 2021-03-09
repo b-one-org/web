@@ -19,13 +19,13 @@ var icons={
 }
 
 
-const Services = ({title,data}) => {
+const Services = ({title, content, data}) => {
     return (
       <div className='services-block'>
         <div className='services-section-title'>
           <h2 className='services-title'>{title}</h2>
           <p className='services-text'>
-            When you become an Explorer of the Alternative, you can access many things that keep you in mind-body balance and always learning.
+            {content}
           </p>
         </div>
         <div className='services-row'>

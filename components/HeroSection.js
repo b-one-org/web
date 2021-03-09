@@ -1,12 +1,12 @@
 
 import Button from './Button';
 
-const HeroSection = () => {
+const HeroSection = ({title,content, textButtonOutline, textButtonPrimary}) => {
   return (
     <div className='header-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>EXPLORE THE ALTERNATIVE</h1>
-      <p className="header-container-text">The <b className="bold-color">Explorers</b> of the <b className="bold-color">Alternative</b> are the most disruptive people who works for challenging projects.</p>
+      <h1>{title}</h1>
+      {content}
 
       <div className='header-btns'>
         <Button
@@ -15,7 +15,7 @@ const HeroSection = () => {
           buttonSize='btn--large'
           linkTo="/join"
         >
-          BE DISRUPTIVE
+          {textButtonOutline}
         </Button>
         <Button
           className='btns'
@@ -24,7 +24,7 @@ const HeroSection = () => {
           onClick={console.log('hey')}
           linkTo="/hire"
         >
-          WORK WITH ExpA
+          {textButtonPrimary}
         </Button>
       </div>
     </div>

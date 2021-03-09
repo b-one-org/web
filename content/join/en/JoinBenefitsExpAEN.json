@@ -1,5 +1,7 @@
 {
-    "Services": [{
+    "title":"Benefits",
+    "content":"When you become an Explorer of the Alternative, you can access many things that keep you in mind-body balance and always learning.",
+    "services": [{
         "icon": "fa fa-book",
         "name": "Books",
         "text": ""

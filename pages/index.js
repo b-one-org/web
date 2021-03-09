@@ -1,25 +1,30 @@
+import { useRouter } from 'next/router';
+import en from '../locales/en';
+import es from '../locales/es';
+
 import Container from '../components/Container';
 import Head from 'next/head'
 
 import loadable from '@loadable/component';
 
 import HeroSection from '../components/HeroSection';
-import Footer from '../components/Footer';
 
-import ExpAProjects from '../content/home/HomeExpAProjects.json'
-import ExpAProblemsContent from '../content/home/HomeExpAProblems.js'
-import ExpAProblems from '../content/home/HomeExpAProblems.json'
-import MiddleBlockHomeContent from '../content/home/MiddleBlockHomeContent'
-import ExpAMiddleBlock from '../content/home/HomeExpAMiddleBlock.json'
-import ExpARecruitment from '../content/home/HomeExpARecruitment.json'
-import ExpAMotivation from '../content/home/HomeExpAMotivation.json'
-import ProvocativeMiddleBlock from '../content/home/HomeProvocativeMiddleBlock.json'
+import ExpAProjects from '../content/home/en/HomeExpAProjectsEN.json'
+import ExpAProblems from '../content/home/en/HomeExpAProblemsEN.json'
+//import MiddleBlockHomeContent from '../content/home/MiddleBlockHomeContent'
+//import ExpAMiddleBlock from '../content/home/HomeExpAMiddleBlockEN.json'
+import ExpARecruitment from '../content/home/en/HomeExpARecruitmentEN.json'
+import ExpAMotivation from '../content/home/en/HomeExpAMotivationEN.json'
 
 const MiddleBlock = loadable(() => import('../components/MiddleBlock'));
 const Cards = loadable(() => import('../components/Cards'));
 const ContentBlock = loadable(() => import('../components/ContentBlock'));
 
 const Index = () => {
+  const router = useRouter();
+  const { locale } = router;
+  const t=locale==='en' ? en: es;
+
   return (
     <>
       <Head>
@@ -27,43 +32,53 @@ const Index = () => {
         <link rel="shortcut icon" href="/circle-regular.svg" />
       </Head>
       <Container>
-        <HeroSection />
-        <MiddleBlock 
-        title={"Who We Are"}
-        content={MiddleBlockHomeContent}
+        <HeroSection 
+        title={t.home.headerTitle}
+        content={t.home.headerContent}
+        textButtonOutline={t.home.headerButtonOutline}
+        textButtonPrimary={t.home.headerButtonPrimary}
         />
-        <Cards />
+        <MiddleBlock 
+        title={t.home.middleBlockTitle}
+        content={t.home.middleBlockContent}
+        />
+        <Cards 
+        title={t.home.cardsTitle}
+        textCardLeft={t.home.cardsTextCardLeft}
+        textCardRight={t.home.cardsTextCardRight}
+        textCardMiddle={t.home.cardsTextCardMiddle}
+        />
         <ContentBlock
         img={ExpAProjects.img}
         left={true}
-        title={ExpAProjects.title}
-        content={ExpAProjects.content}
+        title={t.home.expAProjectsTitle}
+        content={t.home.expAProjectsContent}
         />
         <ContentBlock
         img={ExpAProblems.img}
         left={false}
-        title={ExpAProblems.title}
-        content={ExpAProblemsContent}
+        title={t.home.expAProblemsTitle}
+        content={t.home.expAProblemsContent}
         />
         <MiddleBlock 
-        title={ExpAMiddleBlock.title}
-        content={ExpAMiddleBlock.content}
+        title={t.home.expAMiddleBlockTitle}
+        content={t.home.expAMiddleBlockContent}
         />
         <ContentBlock
         img={ExpARecruitment.img}
         left={true}
-        title={ExpARecruitment.title}
-        content={ExpARecruitment.content}
+        title={t.home.expARecruitmentTitle}
+        content={t.home.expARecruitmentContent}
         />
         <ContentBlock
         img={ExpAMotivation.img}
         left={false}
-        title={ExpAMotivation.title}
-        content={ExpAMotivation.content}
+        title={t.home.expAMotivationTitle}
+        content={t.home.expAMotivationContent}
         />
         <MiddleBlock 
-        title={ProvocativeMiddleBlock.title}
-        content={ProvocativeMiddleBlock.content}
+        title={t.home.provocativeMiddleBlockTitle}
+        content={t.home.provocativeMiddleBlockContent}
         />
       </Container>
     </>
