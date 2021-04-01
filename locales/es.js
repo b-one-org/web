@@ -42,7 +42,7 @@ export default {
         aboutus:'Nosotros',
         impulse:'Impulsar',
         projects:'Proyectos',
-        challenges:'Desafios',
+        challenges:'Desafíos',
         join:'UNIRSE',
     },
     //FOOTER
@@ -51,7 +51,7 @@ export default {
         vision:'Visión',
         community:'Comunidad',
         frameworks:'Marcos de referencia',
-        expAWho:'Quienes son',
+        expAWho:'QuiÉnes son',
         principles:'Principios',
         benefits:'Beneficios',
         connect:'Conectar',
@@ -61,7 +61,7 @@ export default {
     home:{
         headerTitle: 'EXPLORA LO ALTERNATIVO',
         headerContent: HomeHeaderContent,
-        headerButtonOutline: 'SE DISRUPTIVO',
+        headerButtonOutline: 'SÉ DISRUPTIVO',
         headerButtonPrimary: 'TRABAJA CON ExpA',
         middleBlockTitle: 'Quiénes Somos',
         middleBlockContent: HomeMiddleBlockHomeContent,
