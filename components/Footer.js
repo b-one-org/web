@@ -50,7 +50,7 @@ const Footer = () => {
           <div className='footer-link-items'>
             <h2>{t.footer.connect}</h2>
             <Link href='https://airtable.com/shrvo0dz6nvEEXMIl'>{t.footer.contact}</Link>
-            <Link href='/'>Instagram</Link>
+            <Link href='https://www.instagram.com/b.one.ig/'>Instagram</Link>
             <Link href='/'>Youtube</Link>
             <Link href='/'>LinkedIn</Link>
           </div>
